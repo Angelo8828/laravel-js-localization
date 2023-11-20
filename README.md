@@ -1,9 +1,7 @@
 laravel-js-localization
 =======================
-[![Build Status](https://travis-ci.org/andywer/laravel-js-localization.svg?branch=laravel-5)](https://travis-ci.org/andywer/laravel-js-localization) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/andywer/laravel-js-localization/badges/quality-score.png?b=laravel-5)](https://scrutinizer-ci.com/g/andywer/laravel-js-localization/?branch=laravel-5) [![Code Coverage](https://scrutinizer-ci.com/g/andywer/laravel-js-localization/badges/coverage.png?b=laravel-5)](https://scrutinizer-ci.com/g/andywer/laravel-js-localization/?branch=laravel-5) [![Total Downloads](https://poser.pugx.org/andywer/js-localization/downloads.svg)](https://packagist.org/packages/andywer/js-localization)
 
-
-Simple, ease-to-use and flexible package for the [Laravel](http://laravel.com/) web framework. Allows you to use localized messages of the Laravel webapp (see `resources/lang` directory) in your Javascript code. You may easily configure which messages you need to export.
+Simple, ease-to-use and flexible package for the [Laravel](http://laravel.com/) web framework. Allows you to use localized messages of the Laravel webapp (see `resources/lang` directory) in your Javascript code. You may easily configure which messages you need to export. Future-proofed and modernized version of https://github.com/andywer/laravel-js-localization
 
 **⚠️ Looking for a new maintainer. Please contact me if you are interested.**
 
@@ -13,11 +11,7 @@ Branches
 
   Laravel  | Branch
 :----------|:-------
- 8         | laravel-8
- 7         | laravel-7
- 6         | laravel-6
- 5.8       | laravel-5.8
- 5.0 - 5.7 | laravel-5 (end of life)
+ 10         | dev-laravel-10
 
 
 Installation
@@ -27,7 +21,7 @@ Add the following line to the `require` section of your Laravel webapp's `compos
 
 ```javascript
     "require": {
-        "andywer/js-localization": "dev-laravel-6"      // see table above
+        "angelo8828/laravel-js-localization": "dev-laravel-10"      // see table above
     }
 ```
 
@@ -81,13 +75,13 @@ return [
      *     'passwords.token'
      * ]
      */
-     
+
     // Set the keys of config properties you want to use in javascript.
     // Caution: Do not expose any configuration values that should be kept privately!
     'config' => [
         'app.debug'
     ],
-     
+
     // Disables the config cache if set to true, so you don't have to run `php artisan js-localization:refresh`
     // each time you change configuration files.
     // Attention: Should not be used in production mode due to decreased performance.
@@ -102,7 +96,6 @@ return [
 __Important:__
 
 The messages configuration will be cached when the JsLocalizationController is used for the first time. After changing the messages configuration you will need to call __`php artisan js-localization:refresh`__ to refresh that cache. That also affects the config properties you export to javascript, since they are cached, too.
-
 
 Usage
 -----
@@ -134,7 +127,7 @@ You just need to add the necessary `<script>` tags to your layout. Here is an ex
 
 Remember it's best to not put the `@yield('js-localization.head')` in the `<head>` as it contains the `<script>` tag
 shipping the frontend part of this package. It's best practice to put it at the end of the `<body>`, but **before**
-other `<script>` tags. The example above simply includes it in the head, since it's the simplest form to use it. 
+other `<script>` tags. The example above simply includes it in the head, since it's the simplest form to use it.
 
 ### Static generation
 
@@ -221,4 +214,4 @@ class MyServiceProvider extends ServiceProvider
 License
 -------
 
-This software is released under the MIT license. See [license](https://raw.github.com/andywer/laravel-js-localization/master/LICENSE).
+This software is released under the MIT license. See [license](https://raw.github.com/angelo8828/laravel-js-localization/master/LICENSE).
