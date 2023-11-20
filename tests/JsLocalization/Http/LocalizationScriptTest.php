@@ -11,7 +11,7 @@ class LocalizationScriptTest extends TestCase
         
         // Test for JS content
         
-        $this->assertRegExp('/^!?\(?function\(.*\);/', $content);
+        $this->assertMatchesRegularExpression('/^!?\(?function\(.*\);/', $content);
     }
     
     public function testScriptAndTranslationCombinedRetrieval()
@@ -23,16 +23,16 @@ class LocalizationScriptTest extends TestCase
 
         // Test for JS content
 
-        $this->assertRegExp('/^!?\(?function\(.*\);/', $content);
+        $this->assertMatchesRegularExpression('/^!?\(?function\(.*\);/', $content);
 
         // Test for Lang.addMessages()
 
         $addMessagesRegex = '/Lang\.addMessages\( (\{.*?\}) \);/x';
-        $this->assertRegExp($addMessagesRegex, $content);
+        $this->assertMatchesRegularExpression($addMessagesRegex, $content);
         
         // Test for Config.addConfig()
 
         $addConfigRegex = '/Config\.addConfig\( (\{.*?\}) \);/x';
-        $this->assertRegExp($addConfigRegex, $content);
+        $this->assertMatchesRegularExpression($addConfigRegex, $content);
     }
 }

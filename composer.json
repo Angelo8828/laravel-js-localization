@@ -1,22 +1,28 @@
 {
-    "name": "andywer/js-localization",
-    "description": "Laravel package to provide localizations to the Javascript code.",
+    "name": "angelo8828/laravel-js-localization",
+    "description": "Laravel package to provide localizations to the Javascript code. Future-proofed and modernized version of https://github.com/andywer/laravel-js-localization",
     "keywords": ["laravel", "javascript", "localization", "translation", "messages"],
     "license": "MIT",
     "authors": [
         {
             "name": "Andy Wermke",
-            "email": "andy@dev.next-step-software.com"
+            "email": "andy@dev.next-step-software.com",
+            "homepage": "https://andywer.com/"
+        },
+        {
+            "name": "Angelo Joseph Salvador",
+            "email": "angelo8828@gmail.com",
+            "homepage": "https://github.com/Angelo8828"
         }
     ],
     "require": {
-        "php": ">=7.3.0",
-        "illuminate/support": "6.*|7.*|8.*"
+        "php": ">=8.2.0",
+        "illuminate/support": "10.*"
     },
     "require-dev": {
         "mockery/mockery": "~1.0",
-        "orchestra/testbench": "4.*",
-        "phpunit/phpunit": "^8.0"
+        "orchestra/testbench": "8.*",
+        "phpunit/phpunit": "^9.6"
     },
     "autoload": {
         "psr-4": {
@@ -30,7 +36,7 @@
     },
     "extra": {
         "component": "package",
-        "frameworks": ["Laravel 7", "Laravel 8"]
+        "frameworks": ["Laravel 7", "Laravel 8", "Laravel 9", "Laravel 10"]
     },
     "minimum-stability": "dev",
     "repositories": [

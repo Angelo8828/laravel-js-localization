@@ -4,3 +4,4 @@ _ide_fix.php
 composer.phar
 .DS_Store
 .idea
+.phpunit.result.cache
