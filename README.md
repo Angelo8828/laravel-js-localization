@@ -3,7 +3,7 @@ laravel-js-localization
 
 Simple, ease-to-use and flexible package for the [Laravel](http://laravel.com/) web framework. Allows you to use localized messages of the Laravel webapp (see `resources/lang` directory) in your Javascript code. You may easily configure which messages you need to export. Future-proofed and modernized version of https://github.com/andywer/laravel-js-localization
 
-**⚠️ Looking for a new maintainer. Please contact me if you are interested.**
+This version was directly forked from [Andywer's JS Localization Helper for Laravel](https://github.com/andywer/laravel-js-localization). The original project is no longer maintained and not working anymore for Laravel projects having versions 9.0.
 
 
 Branches
@@ -11,7 +11,7 @@ Branches
 
   Laravel  | Branch
 :----------|:-------
- 10         | dev-laravel-10
+ 10        | dev-laravel-10
 
 
 Installation
